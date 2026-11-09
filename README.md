@@ -1,1 +1,3 @@
 # MOMENTO-3-DE-LOGICA
+Anibal Argel Ortiz
+CC 1003049581

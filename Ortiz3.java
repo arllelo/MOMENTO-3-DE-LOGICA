@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class InventarioChevignon {
+public class Ortiz3 {
 
 
     public static boolean buscarReferencia(String[] arreglo, String nombreBuscado) {
@@ -40,7 +40,7 @@ public class InventarioChevignon {
             switch (opcion) {
 
                 case 1:
-                    System.out.println("\nREFERENCIAS DISPONIBLES:");
+                    System.out.println("REFERENCIAS DISPONIBLES:");
 
                     for (int i = 0; i < referencias.length; i++) {
                         if (referencias[i] != null) {
@@ -57,5 +57,40 @@ public class InventarioChevignon {
                         System.out.println("La referencia SI existe en el inventario.");
                     } else {
                         System.out.println("La referencia NO existe en el inventario.");
+                         }
+                    break;
+
+                case 3:
+                    System.out.print("Ingrese la nueva referencia: ");
+                    String nuevaReferencia = teclado.nextLine();
+
+                    boolean agregada = false;
+
+                    for (int i = 0; i < referencias.length; i++) {
+                        if (referencias[i] == null) {
+                            referencias[i] = nuevaReferencia;
+                            agregada = true;
+                            System.out.println("Referencia agregada correctamente.");
+                            break;
+                        }
+                    }
+
+                    if (!agregada) {
+                        System.out.println("No hay espacios disponibles en el arreglo.");
+                    }
+                    break;
+
+                case 4:
+                    System.out.println("Aplicación finalizada.");
+                    break;
+
+                default:
+                    System.out.println("Opción inválida.");
+            }
+        }
+
+        teclado.close();
+    }
+}
 
             

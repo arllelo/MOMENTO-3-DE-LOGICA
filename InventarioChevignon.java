@@ -34,5 +34,28 @@ public class InventarioChevignon {
             System.out.println("3.Agregar Referencia");
             System.out.println("4.Salir");
             System.out.print("Seleccione una opcion: ");
+            opcion = teclado.nextInt();
+            teclado.nextLine(); 
+
+            switch (opcion) {
+
+                case 1:
+                    System.out.println("\nREFERENCIAS DISPONIBLES:");
+
+                    for (int i = 0; i < referencias.length; i++) {
+                        if (referencias[i] != null) {
+                            System.out.println("- " + referencias[i]);
+                        }
+                    }
+                    break;
+
+                case 2:
+                    System.out.print("Ingrese la referencia a buscar: ");
+                    String nombreBuscado = teclado.nextLine();
+
+                    if (buscarReferencia(referencias, nombreBuscado)) {
+                        System.out.println("La referencia SI existe en el inventario.");
+                    } else {
+                        System.out.println("La referencia NO existe en el inventario.");
 
             
